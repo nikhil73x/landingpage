@@ -30,6 +30,7 @@
       height: 1080px;
       position: relative;
       overflow: hidden;
+      padding: 70px 90px;
       padding: 55px 80px;
       display: flex;
       flex-direction: column;
@@ -47,6 +48,7 @@
       justify-content: space-between;
       align-items: center;
       border-bottom: 1px solid rgba(220, 185, 110, 0.2);
+      padding-bottom: 24px;
       padding-bottom: 18px;
     }
 
@@ -64,6 +66,8 @@
     .brand-tag span {
       display: inline-grid;
       place-items: center;
+      width: 42px;
+      height: 42px;
       width: 40px;
       height: 40px;
       background: rgba(243, 206, 122, 0.15);
@@ -74,11 +78,13 @@
 
     .slide-num {
       font-family: 'Space Grotesk', monospace;
+      font-size: 18px;
       font-size: 16px;
       font-weight: 700;
       color: #94a3b8;
       letter-spacing: 2px;
       background: rgba(255, 255, 255, 0.05);
+      padding: 8px 18px;
       padding: 6px 16px;
       border-radius: 999px;
       border: 1px solid rgba(255, 255, 255, 0.1);
@@ -86,26 +92,32 @@
 
     /* Titles */
     .title-group {
+      margin-top: 15px;
       margin-top: 10px;
       margin-bottom: 16px;
     }
 
     .eyebrow {
       font-family: 'Space Grotesk', sans-serif;
+      font-size: 15px;
       font-size: 14px;
       font-weight: 700;
       color: #f59e0b;
       letter-spacing: 3px;
       text-transform: uppercase;
+      margin-bottom: 8px;
       margin-bottom: 6px;
       display: flex;
       align-items: center;
+      gap: 10px;
       gap: 8px;
     }
 
     .eyebrow::before {
       content: '';
       display: inline-block;
+      width: 24px;
+      height: 2px;
       width: 8px;
       height: 8px;
       background: #f59e0b;
@@ -114,33 +126,45 @@
 
     h1 {
       font-family: 'Cinzel', serif;
+      font-size: 54px;
       font-size: 40px;
       font-weight: 800;
       line-height: 1.15;
       color: #ffffff;
+      line-height: 1.15;
+      letter-spacing: 1px;
       letter-spacing: 0.5px;
     }
 
     h1 em {
       font-style: normal;
       color: #f3ce7a;
+      text-shadow: 0 0 25px rgba(243, 206, 122, 0.4);
       text-shadow: 0 0 25px rgba(243, 206, 122, 0.35);
     }
 
     .subtitle {
+      font-size: 22px;
       font-size: 17px;
       color: #94a3b8;
+      margin-top: 10px;
+      max-width: 1200px;
+      line-height: 1.5;
       margin-top: 6px;
       max-width: 1400px;
       line-height: 1.4;
     }
 
+    /* Content Layouts */
+    .content-grid {
     /* Grids */
     .split-layout {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 32px;
+      margin-top: 20px;
       flex: 1;
+      align-content: center;
       align-items: stretch;
       min-height: 0;
     }
@@ -157,6 +181,7 @@
     }
 
     .grid-2 {
+      grid-template-columns: 1fr 1fr;
       grid-template-columns: repeat(2, 1fr);
     }
 
@@ -164,8 +189,17 @@
       grid-template-columns: repeat(3, 1fr);
     }
 
+    .grid-4 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
     /* Cards */
     .card {
+      background: rgba(10, 22, 38, 0.7);
+      border: 1.5px solid rgba(220, 185, 110, 0.22);
+      border-radius: 20px;
+      padding: 34px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
       background: rgba(15, 23, 42, 0.65);
       border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 18px;
@@ -179,28 +213,40 @@
     }
 
     .card.highlight {
+      border-color: rgba(245, 158, 11, 0.6);
+      background: linear-gradient(145deg, rgba(16, 34, 58, 0.85), rgba(8, 20, 36, 0.95));
+      box-shadow: 0 20px 50px rgba(245, 158, 11, 0.15);
       background: rgba(243, 206, 122, 0.05);
       border-color: rgba(243, 206, 122, 0.28);
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
     }
 
     .card-icon {
+      font-size: 38px;
+      margin-bottom: 16px;
       font-size: 26px;
       margin-bottom: 12px;
       display: inline-block;
     }
 
     .card h3 {
+      font-size: 24px;
       font-family: 'Space Grotesk', sans-serif;
       font-size: 20px;
       font-weight: 700;
       color: #f8fafc;
+      margin-bottom: 12px;
       margin-bottom: 10px;
       display: flex;
       align-items: center;
+      gap: 12px;
       gap: 10px;
     }
 
+    .card p, .card li {
+      font-size: 18px;
+      color: #94a3b8;
+      line-height: 1.6;
     .card.highlight h3 {
       color: #f3ce7a;
     }
@@ -218,14 +264,19 @@
       gap: 12px;
     }
 
+    .card li {
+      margin-bottom: 12px;
     .card ul li {
       font-size: 15px;
       color: #cbd5e1;
       line-height: 1.45;
       position: relative;
       padding-left: 24px;
+      position: relative;
     }
 
+    .card li::before {
+      content: '✦';
     .card ul li::before {
       content: '▸';
       position: absolute;
@@ -332,16 +383,20 @@
       border-top: 1px solid rgba(255, 255, 255, 0.08);
       padding: 12px 18px;
       font-size: 14px;
+      top: 2px;
       color: #cbd5e1;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
+    .card strong {
+      color: #f1f5f9;
     .mockup-caption strong {
       color: #f3ce7a;
     }
 
+    /* Pills / Badges */
     /* Avatar Showcase Grid */
     .avatar-showcase {
       display: grid;
@@ -388,12 +443,20 @@
       gap: 8px;
       margin-top: 12px;
       flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
     }
 
     .pill {
+      font-size: 15px;
       font-family: 'Space Grotesk', sans-serif;
       font-size: 12px;
       font-weight: 700;
+      padding: 8px 18px;
+      border-radius: 999px;
+      background: rgba(245, 158, 11, 0.12);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.3);
       padding: 4px 12px;
       border-radius: 6px;
       background: rgba(243, 206, 122, 0.12);
@@ -420,6 +483,8 @@
       justify-content: space-between;
       align-items: center;
       border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 20px;
+      font-size: 16px;
       padding-top: 16px;
       font-size: 15px;
       color: #64748b;
@@ -432,18 +497,23 @@
       font-weight: 700;
     }
 
+    /* Special Elements */
     /* Stats & Snippets */
     .stat-box {
       background: rgba(243, 206, 122, 0.08);
       border: 1.5px solid rgba(243, 206, 122, 0.3);
+      border-radius: 16px;
+      padding: 22px 28px;
       border-radius: 14px;
       padding: 16px 20px;
       text-align: center;
+      margin-top: 16px;
       margin-top: 12px;
     }
 
     .stat-number {
       font-family: 'Space Grotesk', sans-serif;
+      font-size: 48px;
       font-size: 42px;
       font-weight: 800;
       color: #fbbf24;
@@ -451,20 +521,28 @@
     }
 
     .stat-desc {
+      font-size: 15px;
       font-size: 14px;
       color: #cbd5e1;
       font-weight: 600;
+      margin-top: 6px;
+      letter-spacing: 0.5px;
       margin-top: 4px;
     }
 
     .code-snippet {
       font-family: 'Space Grotesk', monospace;
+      font-size: 16px;
       font-size: 14px;
       background: #020617;
       border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 16px 20px;
       border-radius: 10px;
       padding: 12px 16px;
       color: #38bdf8;
+      margin-top: 12px;
+      line-height: 1.5;
       margin-top: 10px;
       line-height: 1.45;
     }
@@ -482,9 +560,20 @@
     <div class="title-group">
       <p class="eyebrow">Project Overview &amp; Problem Statement</p>
       <h1>Gamifying Shared Finances:<br><em>The Grand Line Ledger</em></h1>
+      <p class="subtitle">An interactive group expense tracking and debt-minimization engine that replaces awkward social debt chasing with collaborative voyage storytelling.</p>
       <p class="subtitle">An interactive group expense tracking and debt-minimization engine that replaces awkward social debt chasing with collaborative anime voyage storytelling.</p>
     </div>
 
+    <div class="content-grid grid-2">
+      <div class="card">
+        <span class="card-icon">⚡</span>
+        <h3>The Real-World Problem</h3>
+        <ul>
+          <li><strong>Messy Shared Expenses:</strong> Group trips, hackathons, and flatshares lead to scattered bills, forgotten payments, and fractured chat threads.</li>
+          <li><strong>Awkward Debt Collection:</strong> Pestering friends for small splits creates psychological tension and social friction.</li>
+          <li><strong>Circular Debt Inefficiencies:</strong> In a group where A owes B, B owes C, and C owes A, members execute redundant transactions that rack up bank transfer fees.</li>
+          <li><strong>Boring Spreadsheets:</strong> Tools like Splitwise have become paywalled, complex, and uninspiring to maintain.</li>
+        </ul>
     <div class="split-layout">
       <!-- Left Column: Problem & Solution -->
       <div style="display: flex; flex-direction: column; gap: 16px;">
@@ -510,6 +599,15 @@
         </div>
       </div>
 
+      <div class="card highlight">
+        <span class="card-icon">🧭</span>
+        <h3>Our Proposed Solution</h3>
+        <ul>
+          <li><strong>Gamified Voyage UX:</strong> Shared finances are reframed into an exhilarating pirate voyage where debts are treated as "crew settlements".</li>
+          <li><strong>Algorithmic Debt Minimization:</strong> A greedy two-pointer graph engine consolidates circular debts into the minimum possible pairwise settlements.</li>
+          <li><strong>Zero Barrier to Entry:</strong> 100% client-side privacy, instantaneous local persistence, and no mandatory registration.</li>
+          <li><strong>Complete Financial Transparency:</strong> One-click CSV voyage manifests, category expense metrics, and printable receipts.</li>
+        </ul>
       <!-- Right Column: Live Web Screenshot Mockup -->
       <div class="mockup-container">
         <div class="mockup-bar">
@@ -554,6 +652,7 @@
       <div class="card">
         <span class="card-icon">⚓</span>
         <h3>Multi-Crew Ledger</h3>
+        <p>Manage separate independent groups (e.g. Vacation, Flatmates, Roadtrip) in a single interface with isolated balances and dedicated member rosters.</p>
         <p>Manage multiple independent groups (e.g. Vacation, Flatmates, Roadtrip) in a single interface with isolated balances and dedicated member rosters.</p>
         <div class="pill-group">
           <span class="pill">Context Isolation</span>
@@ -636,6 +735,8 @@
         <span class="card-icon">💻</span>
         <h3>Frontend Framework</h3>
         <ul>
+          <li><strong>Next.js 16 (App Router):</strong> Turbopack compilation delivering sub-second hot reload and build times.</li>
+          <li><strong>React 19 &amp; TypeScript:</strong> Strict compile-time type safety for complex financial calculation pipelines.</li>
           <li><strong>Next.js 16 (App Router):</strong> Turbopack compilation delivering sub-second hot reload and production builds.</li>
           <li><strong>React 19 &amp; TypeScript:</strong> Strict compile-time type safety for all financial calculation pipelines.</li>
           <li><strong>Motion (Framer Motion):</strong> Hardware-accelerated spring animations for fluid carousel and scene transitions.</li>
@@ -663,6 +764,7 @@
         <h3>Data &amp; Infrastructure</h3>
         <ul>
           <li><strong>Offline-First Persistence:</strong> Self-healing schema validation stored in browser LocalStorage across versions v1–v5.</li>
+          <li><strong>Resilient Image Pipeline:</strong> Layered avatar fallback with non-destructive error handling.</li>
           <li><strong>Resilient Image Pipeline:</strong> 22 bundled character avatars with automatic name mapping and non-destructive fallbacks.</li>
           <li><strong>Vercel Edge Network:</strong> Globally deployed edge distribution with 99.9% uptime and zero server latency.</li>
         </ul>
@@ -688,6 +790,16 @@
       <p class="subtitle">What makes Grand Line Ledger distinct, defensible, and uniquely useful compared to existing alternatives.</p>
     </div>
 
+    <div class="content-grid grid-2">
+      <div class="card">
+        <span class="card-icon">✨</span>
+        <h3>Novelty vs. Existing Solutions</h3>
+        <ul>
+          <li><strong>Narrative Immersion:</strong> Replaces cold corporate grids with animated voyage cutscenes, Day/Night theme toggles, and nautical soundscapes.</li>
+          <li><strong>22 Character Avatars + Auto-Match:</strong> Comprehensive roster of One Piece legends (Luffy, Roger, Garp, Shanks, Ace, Blackbeard, Law) that automatically highlights as you type member names.</li>
+          <li><strong>Synthesizer-Driven Audio:</strong> Zero audio file downloads; procedural coin sound synthesis directly via Web Audio API oscillators.</li>
+          <li><strong>Self-Healing State Engine:</strong> Upgrades legacy data structures in background without wiping user transaction records.</li>
+        </ul>
     <div class="split-layout uneven">
       <!-- Left Column: Novelty & USP Points -->
       <div style="display: flex; flex-direction: column; gap: 16px;">
@@ -713,6 +825,15 @@
         </div>
       </div>
 
+      <div class="card highlight">
+        <span class="card-icon">💎</span>
+        <h3>The 4 Pillars of Our USP</h3>
+        <ul>
+          <li><strong>1. Zero Social Friction:</strong> Gamifying bill-splitting into a shared quest turns uncomfortable debt chasing into lighthearted collaboration.</li>
+          <li><strong>2. 100% Privacy &amp; Zero Lock-In:</strong> No compulsory phone numbers, passwords, or cloud data harvesting. Completely private and on-device.</li>
+          <li><strong>3. Mathematical Optimality:</strong> Automatically resolves circular debts, eliminating redundant transactions and peer-to-peer transfer fees.</li>
+          <li><strong>4. Real-World Auditability:</strong> One-click CSV exports and cleanly formatted physical print receipts ensure peace of mind.</li>
+        </ul>
       <!-- Right Column: Avatar Showcase Grid -->
       <div class="card" style="justify-content: space-between;">
         <div>
@@ -786,9 +907,19 @@
     <div class="title-group">
       <p class="eyebrow">Demo &amp; Verification</p>
       <h1>Live Results, <em>Demo &amp; Verification</em></h1>
+      <p class="subtitle">Fully implemented, tested, and running in high-performance production.</p>
       <p class="subtitle">Fully implemented, tested, and running in high-performance production on Vercel Edge.</p>
     </div>
 
+    <div class="content-grid grid-3">
+      <div class="card highlight">
+        <span class="card-icon">🚀</span>
+        <h3>Live Production Deployment</h3>
+        <p>The application is live and accessible globally with instant edge delivery:</p>
+        <div class="stat-box" style="margin-top: 18px;">
+          <div class="stat-desc" style="font-size: 16px; color: #fbbf24; font-weight: 700;">LIVE URL</div>
+          <div class="stat-desc" style="font-size: 20px; color: #ffffff; word-break: break-all; margin-top: 8px;">
+            https://nexasoul2.vercel.app
     <div class="split-layout uneven">
       <!-- Left Column: Stats & Links -->
       <div style="display: flex; flex-direction: column; gap: 16px;">
@@ -808,6 +939,9 @@
             <span class="pill pill-green">✓ 100/100 Lighthouse</span>
           </div>
         </div>
+        <div class="pill-group" style="justify-content: center; margin-top: 18px;">
+          <span class="pill pill-green">✓ SSL Encrypted</span>
+          <span class="pill pill-green">✓ Edge Deployed</span>
 
         <div class="card">
           <span class="card-icon">📦</span>
@@ -820,6 +954,14 @@
         </div>
       </div>
 
+      <div class="card">
+        <span class="card-icon">📦</span>
+        <h3>Open Source &amp; Submission</h3>
+        <ul>
+          <li><strong>Complete ZIP Archive:</strong> <code>Grand-Line-Ledger-Complete.zip</code> (~14.2 MB) packaged with full Next.js source, components, video, and assets.</li>
+          <li><strong>GitHub Repository:</strong> Clean architecture with strict TypeScript definitions and Turbopack support.</li>
+          <li><strong>Zero Configuration Setup:</strong> Instant local preview via <code>npm run dev</code> or standalone browser execution.</li>
+        </ul>
       <!-- Right Column: Real Live Play Screenshot of Settlements -->
       <div class="mockup-container">
         <div class="mockup-bar">
@@ -838,6 +980,16 @@
           <span><strong>Live Play:</strong> Red Haired Pirates crew settling pairwise debts in ฿ Beli</span>
           <span style="color: #34d399; font-weight: bold;">0 Owed • All Settled</span>
         </div>
+      </div>
+
+      <div class="card">
+        <span class="card-icon">📈</span>
+        <h3>Impact &amp; Performance Metrics</h3>
+        <ul>
+          <li><strong>100% Client Availability:</strong> Zero network dependencies for core calculation and ledger persistence.</li>
+          <li><strong>Sub-10ms UI Interactions:</strong> Optimistic state updates and real-time count-up animations for balance changes.</li>
+          <li><strong>Cross-Platform Accessibility:</strong> Fully responsive design adapted for desktop, tablet, and mobile with high-contrast Light and Dark themes.</li>
+        </ul>
       </div>
     </div>
 

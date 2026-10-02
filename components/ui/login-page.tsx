@@ -51,7 +51,7 @@ export function LoginPage() {
           <aside className="login-side" aria-label="Pirate account sign in">
             <div className="panel-light-streak streak-one" aria-hidden="true" />
             <div className="panel-light-streak streak-two" aria-hidden="true" />
-            <LoginForm accent={activeCharacter.accent} onSuccess={handleLoginSuccess} />
+            <LoginForm />
             <p className="panel-footer">GRAND LINE ARCHIVE <span>•</span> EST. 1520</p>
           </aside>
         </motion.main>

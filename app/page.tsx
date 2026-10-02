@@ -1,5 +1,5 @@
-import { LoginPage } from '@/components/ui/login-page';
+import { PortfolioPage } from "@/components/portfolio/portfolio-page";
 
 export default function Home() {
-  return <LoginPage />;
+  return <PortfolioPage />;
 }
