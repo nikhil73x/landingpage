@@ -17,25 +17,25 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: "AttendPulse — Attendance Tracker Portal",
+    category: "Web Development",
+    categoryColor: "bg-indigo-500/10 text-indigo-700 dark:text-indigo-300 border-indigo-500/20",
+    description:
+      "A modern, responsive attendance tracking and student management portal designed with an intuitive dark-themed UI, live roster metrics, and smooth data visualization.",
+    tags: ["React", "Vite", "Tailwind CSS", "JavaScript", "Analytics"],
+    liveUrl: "https://attendpulse.vercel.app/",
+    githubUrl: "https://github.com/nikhilyadav0455",
+    featured: true,
+  },
+  {
     title: "Minimalist Personal Portfolio",
     category: "Web Development",
     categoryColor: "bg-blue-500/10 text-blue-700 dark:text-blue-300 border-blue-500/20",
     description:
-      "A fast, responsive, and minimalist developer portfolio website with consistent typography, smooth section transitions, dark/light theme support, and interactive contact elements.",
-    tags: ["Next.js", "React", "Tailwind CSS", "JavaScript"],
-    liveUrl: "https://github.com/nikhil73x",
-    githubUrl: "https://github.com/nikhil73x",
-    featured: true,
-  },
-  {
-    title: "Student Roster & Attendance Dashboard",
-    category: "Web Development",
-    categoryColor: "bg-indigo-500/10 text-indigo-700 dark:text-indigo-300 border-indigo-500/20",
-    description:
-      "A client-side interactive tool for managing student records, attendance tracking, and search filtering built with vanilla JavaScript, DOM APIs, and HTML/CSS.",
-    tags: ["JavaScript", "HTML5", "CSS3", "DOM API"],
-    liveUrl: "https://github.com/nikhil73x",
-    githubUrl: "https://github.com/nikhil73x",
+      "A fast, responsive, and minimalist developer portfolio website with consistent typography, smooth spring motion, dark/light theme support, and interactive contact elements.",
+    tags: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
+    liveUrl: "https://nexasoul2.vercel.app",
+    githubUrl: "https://github.com/nikhilyadav0455/nexasoul2",
     featured: true,
   },
   {
@@ -45,8 +45,8 @@ const projects: Project[] = [
     description:
       "Hands-on implementation of foundational computer science concepts: singly & doubly linked lists, stack/queue operations, and object-oriented programming concepts in Java.",
     tags: ["Java", "Data Structures", "Linked Lists", "OOP"],
-    liveUrl: "https://github.com/nikhil73x",
-    githubUrl: "https://github.com/nikhil73x",
+    liveUrl: "https://github.com/nikhilyadav0455",
+    githubUrl: "https://github.com/nikhilyadav0455",
   },
   {
     title: "Basic Node.js & SQL Data Manager",
@@ -55,8 +55,8 @@ const projects: Project[] = [
     description:
       "A lightweight backend service using Node.js and Express to perform CRUD queries on relational database tables with structured SQL scripts.",
     tags: ["Node.js", "Express", "SQL & PL/SQL", "npm"],
-    liveUrl: "https://github.com/nikhil73x",
-    githubUrl: "https://github.com/nikhil73x",
+    liveUrl: "https://github.com/nikhilyadav0455",
+    githubUrl: "https://github.com/nikhilyadav0455",
   },
 ];
 
