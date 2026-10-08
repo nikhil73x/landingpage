@@ -132,12 +132,12 @@ export function Hero({ onHireClick, onDownloadCv }: HeroProps) {
               <div className="flex items-center gap-3">
                 {/* GitHub: White Circle with Thick Border */}
                 <a
-                  href="https://github.com/nikhilyadav0455"
+                  href="https://github.com/nikhil73x"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="GitHub profile: nikhilyadav0455"
+                  aria-label="GitHub profile: nikhil73x"
                   className="w-10 h-10 rounded-full bg-white dark:bg-neutral-900 border-2 border-neutral-300 dark:border-neutral-700 shadow-xs flex items-center justify-center text-neutral-900 dark:text-white transition-all duration-300 ease-out hover:scale-115 hover:-translate-y-1 hover:border-neutral-900 dark:hover:border-white hover:shadow-lg active:scale-90 cursor-pointer"
-                  title="GitHub: nikhilyadav0455"
+                  title="GitHub: nikhil73x"
                 >
                   <GithubIcon className="w-4 h-4 stroke-[2.2]" />
                 </a>

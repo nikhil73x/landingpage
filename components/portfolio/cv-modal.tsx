@@ -19,7 +19,7 @@ Email: nikhil73x@gmail.com
 Discord: nikhil73x (https://discord.com/users/nikhil73x)
 Instagram: https://www.instagram.com/ifw_nikhil (@ifw_nikhil)
 LinkedIn: https://www.linkedin.com/in/nikhil-yadav-2a0382440/
-GitHub: https://github.com/nikhilyadav0455
+GitHub: https://github.com/nikhil73x
 Languages: English, Hindi
 
 ==================================================

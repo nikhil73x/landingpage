@@ -341,12 +341,12 @@ export function Contact() {
               <div className="flex items-center gap-2.5">
                 {/* GitHub */}
                 <a
-                  href="https://github.com/nikhilyadav0455"
+                  href="https://github.com/nikhil73x"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full bg-white dark:bg-neutral-900 border-2 border-neutral-300 dark:border-neutral-700 shadow-xs flex items-center justify-center text-neutral-900 dark:text-white transition-all duration-200 hover:scale-110 hover:border-neutral-900 dark:hover:border-white hover:shadow-md active:scale-95"
-                  title="GitHub: nikhilyadav0455"
-                  aria-label="GitHub: nikhilyadav0455"
+                  title="GitHub: nikhil73x"
+                  aria-label="GitHub: nikhil73x"
                 >
                   <GithubIcon className="w-4 h-4 stroke-[2.2]" />
                 </a>

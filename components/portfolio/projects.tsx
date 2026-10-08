@@ -1,6 +1,4 @@
-"use client";
-
-import React, { useState } from "react";
+import React from "react";
 import { FolderGit2, ExternalLink, ArrowUpRight } from "lucide-react";
 import { GithubIcon } from "./icons";
 
@@ -24,7 +22,7 @@ const projects: Project[] = [
       "A modern, responsive attendance tracking and student management portal designed with an intuitive dark-themed UI, live roster metrics, and smooth data visualization.",
     tags: ["React", "Vite", "Tailwind CSS", "JavaScript", "Analytics"],
     liveUrl: "https://attendpulse.vercel.app/",
-    githubUrl: "https://github.com/nikhilyadav0455",
+    githubUrl: "https://github.com/nikhil73x/attendpulse",
     featured: true,
   },
   {
@@ -35,41 +33,12 @@ const projects: Project[] = [
       "A fast, responsive, and minimalist developer portfolio website with consistent typography, smooth spring motion, dark/light theme support, and interactive contact elements.",
     tags: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
     liveUrl: "https://nexasoul2.vercel.app",
-    githubUrl: "https://github.com/nikhilyadav0455/nexasoul2",
+    githubUrl: "https://github.com/nikhil73x/landingpage",
     featured: true,
-  },
-  {
-    title: "Java Data Structures & OOP Lab",
-    category: "Core CS & DSA",
-    categoryColor: "bg-amber-500/10 text-amber-700 dark:text-amber-300 border-amber-500/20",
-    description:
-      "Hands-on implementation of foundational computer science concepts: singly & doubly linked lists, stack/queue operations, and object-oriented programming concepts in Java.",
-    tags: ["Java", "Data Structures", "Linked Lists", "OOP"],
-    liveUrl: "https://github.com/nikhilyadav0455",
-    githubUrl: "https://github.com/nikhilyadav0455",
-  },
-  {
-    title: "Basic Node.js & SQL Data Manager",
-    category: "Full-Stack & SQL",
-    categoryColor: "bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border-emerald-500/20",
-    description:
-      "A lightweight backend service using Node.js and Express to perform CRUD queries on relational database tables with structured SQL scripts.",
-    tags: ["Node.js", "Express", "SQL & PL/SQL", "npm"],
-    liveUrl: "https://github.com/nikhilyadav0455",
-    githubUrl: "https://github.com/nikhilyadav0455",
   },
 ];
 
 export function Projects() {
-  const [activeFilter, setActiveFilter] = useState<string>("All");
-
-  const filters = ["All", "Web Development", "Core CS & DSA", "Full-Stack & SQL"];
-
-  const filteredProjects =
-    activeFilter === "All"
-      ? projects
-      : projects.filter((p) => p.category === activeFilter);
-
   return (
     <section id="projects" className="py-20 sm:py-24 border-t border-neutral-200/80 dark:border-neutral-900 bg-[#f8f9fa] dark:bg-[#09090b] transition-colors">
       <div className="w-full max-w-[940px] mx-auto px-6 sm:px-8">
@@ -82,32 +51,14 @@ export function Projects() {
               <span>Projects</span>
             </div>
             <h2 className="font-sans font-extrabold text-3xl sm:text-4xl text-neutral-950 dark:text-white tracking-tight leading-tight transition-colors">
-              Practical &amp; Academic Work
+              Featured Work &amp; Web Apps
             </h2>
-          </div>
-
-          {/* Filter Pills with distinct surface elevation */}
-          <div className="flex flex-wrap items-center gap-1.5 p-1 rounded-xl bg-white dark:bg-[#131316] border border-neutral-200/90 dark:border-neutral-800 shadow-xs self-start sm:self-auto no-scrollbar">
-            {filters.map((filter) => (
-              <button
-                key={filter}
-                type="button"
-                onClick={() => setActiveFilter(filter)}
-                className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all duration-200 ease-out whitespace-nowrap cursor-pointer hover:-translate-y-0.5 active:scale-95 ${
-                  activeFilter === filter
-                    ? "bg-neutral-950 text-white dark:bg-white dark:text-neutral-950 shadow-xs"
-                    : "text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white"
-                }`}
-              >
-                {filter}
-              </button>
-            ))}
           </div>
         </div>
 
         {/* Project Cards Grid with clear distinction and elevation */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {filteredProjects.map((project) => (
+          {projects.map((project) => (
             <div
               key={project.title}
               className="group p-6 sm:p-7 rounded-2xl border border-neutral-200/90 dark:border-neutral-800 bg-white dark:bg-[#131316] shadow-[0_4px_20px_rgba(0,0,0,0.06)] dark:shadow-[0_6px_25px_rgba(0,0,0,0.45)] hover:border-neutral-400 dark:hover:border-neutral-700 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl dark:hover:shadow-black/70 flex flex-col justify-between"
