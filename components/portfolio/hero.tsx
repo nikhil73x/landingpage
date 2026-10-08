@@ -145,12 +145,12 @@ export function Hero({ onHireClick, onDownloadCv }: HeroProps) {
 
                 {/* LinkedIn: White Circle with Thick Border and Permanent Blue */}
                 <a
-                  href="https://www.linkedin.com/in/nikhil-yadav-2a0382440/"
+                  href="https://www.linkedin.com/in/nikhil73x"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="LinkedIn profile"
+                  aria-label="LinkedIn profile: nikhil73x"
                   className="w-10 h-10 rounded-full bg-white dark:bg-neutral-900 border-2 border-neutral-300 dark:border-neutral-700 shadow-xs flex items-center justify-center text-[#0A66C2] transition-all duration-300 ease-out hover:scale-115 hover:-translate-y-1 hover:border-[#0A66C2] hover:shadow-[0_8px_20px_rgba(10,102,194,0.35)] active:scale-90 cursor-pointer"
-                  title="LinkedIn: Nikhil"
+                  title="LinkedIn: nikhil73x"
                 >
                   <LinkedinIcon className="w-4 h-4 stroke-[2.2]" />
                 </a>

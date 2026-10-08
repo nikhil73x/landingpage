@@ -353,11 +353,12 @@ export function Contact() {
 
                 {/* LinkedIn */}
                 <a
-                  href="https://www.linkedin.com/in/nikhil-yadav-2a0382440/"
+                  href="https://www.linkedin.com/in/nikhil73x"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full bg-white dark:bg-neutral-900 border-2 border-neutral-300 dark:border-neutral-700 shadow-xs flex items-center justify-center text-[#0A66C2] transition-all duration-200 hover:scale-110 hover:border-[#0A66C2] hover:shadow-[0_0_14px_rgba(10,102,194,0.3)] active:scale-95"
-                  title="LinkedIn: Nikhil"
+                  title="LinkedIn: nikhil73x"
+                  aria-label="LinkedIn: nikhil73x"
                 >
                   <LinkedinIcon className="w-4 h-4 stroke-[2.2]" />
                 </a>
