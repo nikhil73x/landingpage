@@ -70,7 +70,7 @@ export function Hero({ onHireClick, onDownloadCv }: HeroProps) {
             <h1 className="font-sans font-extrabold tracking-tight text-neutral-950 dark:text-white text-4xl sm:text-5xl lg:text-[54px] leading-[1.08] mb-1 transition-colors">
               Hi, I&apos;m
               <br />
-              <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-600 via-indigo-500 to-violet-500 dark:from-blue-400 dark:via-indigo-300 dark:to-violet-400 bg-clip-text text-transparent">
                 Nikhil.
               </span>
             </h1>
@@ -106,8 +106,9 @@ export function Hero({ onHireClick, onDownloadCv }: HeroProps) {
               <a
                 href="#contact"
                 onClick={scrollToContact}
-                className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-lg bg-neutral-950 text-white dark:bg-white dark:text-neutral-950 text-sm font-semibold hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-xl dark:hover:shadow-neutral-800/60 active:scale-95 select-none shadow-md cursor-pointer"
+                className="relative group inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-lg bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 text-white text-sm font-semibold transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_10px_25px_-5px_rgba(79,70,229,0.5)] active:scale-95 select-none shadow-md cursor-pointer overflow-hidden"
               >
+                <span className="absolute inset-0 bg-white/15 opacity-0 group-hover:opacity-100 transition-opacity" />
                 <span>&rarr;</span>
                 <span>Hire Me</span>
               </a>

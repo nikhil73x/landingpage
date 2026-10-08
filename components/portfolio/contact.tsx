@@ -592,8 +592,9 @@ export function Contact() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-neutral-950 text-white dark:bg-white dark:text-neutral-950 text-sm font-semibold hover:bg-neutral-800 dark:hover:bg-neutral-200 active:scale-95 transition-all duration-300 ease-out disabled:opacity-60 shadow-md hover:shadow-xl hover:-translate-y-1 cursor-pointer"
+                    className="relative group w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3 rounded-lg bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 text-white text-sm font-semibold hover:shadow-[0_10px_25px_-5px_rgba(79,70,229,0.5)] active:scale-95 transition-all duration-300 ease-out disabled:opacity-60 shadow-md hover:-translate-y-1 cursor-pointer overflow-hidden"
                   >
+                    <span className="absolute inset-0 bg-white/15 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {isSubmitting ? (
                       <span>Sending...</span>
                     ) : (

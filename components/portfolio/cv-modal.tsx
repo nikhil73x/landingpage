@@ -55,7 +55,7 @@ SOFT SKILLS
 PROJECTS & INTERESTS
 ==================================================
 - AttendPulse (Attendance Tracker Portal): Modern attendance tracking & analytics web application built with React, Tailwind CSS, and Vite. Live at https://attendpulse.vercel.app/
-- Personal Portfolio Website: Responsive modern portfolio built with Next.js, Tailwind CSS, TypeScript, and Framer Motion. Live at https://nexasoul2.vercel.app
+- Personal Portfolio Website: Responsive modern portfolio built with Next.js, Tailwind CSS, TypeScript, and Framer Motion. Live at https://nikhil73x.vercel.app
 - Web Development Practice: Building interactive UI components, student utility tools, and DOM manipulation scripts.
 - DSA & Problem Solving: Practicing foundational data structures (arrays, linked lists) and OOP principles in Java.
 `;

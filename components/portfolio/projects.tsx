@@ -32,7 +32,7 @@ const projects: Project[] = [
     description:
       "A fast, responsive, and minimalist developer portfolio website with consistent typography, smooth spring motion, dark/light theme support, and interactive contact elements.",
     tags: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
-    liveUrl: "https://nexasoul2.vercel.app",
+    liveUrl: "https://nikhil73x.vercel.app",
     githubUrl: "https://github.com/nikhil73x/landingpage",
     featured: true,
   },
@@ -58,26 +58,39 @@ export function Projects() {
 
         {/* Project Cards Grid with clear distinction and elevation */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {projects.map((project) => (
+          {projects.map((project, idx) => (
             <div
               key={project.title}
-              className="group p-6 sm:p-7 rounded-2xl border border-neutral-200/90 dark:border-neutral-800 bg-white dark:bg-[#131316] shadow-[0_4px_20px_rgba(0,0,0,0.06)] dark:shadow-[0_6px_25px_rgba(0,0,0,0.45)] hover:border-neutral-400 dark:hover:border-neutral-700 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl dark:hover:shadow-black/70 flex flex-col justify-between"
+              className={`group relative p-6 sm:p-7 rounded-2xl border transition-all duration-300 hover:-translate-y-2 flex flex-col justify-between overflow-hidden bg-white dark:bg-[#131316] ${
+                idx === 0
+                  ? "border-neutral-200/90 dark:border-indigo-900/40 hover:border-indigo-500/60 dark:hover:border-indigo-500/60 shadow-[0_4px_20px_rgba(99,102,241,0.06)] dark:shadow-[0_6px_25px_rgba(0,0,0,0.5)] hover:shadow-[0_20px_40px_-15px_rgba(99,102,241,0.25)]"
+                  : "border-neutral-200/90 dark:border-cyan-900/40 hover:border-cyan-500/60 dark:hover:border-cyan-500/60 shadow-[0_4px_20px_rgba(6,182,212,0.06)] dark:shadow-[0_6px_25px_rgba(0,0,0,0.5)] hover:shadow-[0_20px_40px_-15px_rgba(6,182,212,0.25)]"
+              }`}
             >
+              {/* Subtle Ambient Hover Glow in background of card */}
+              <div
+                className={`absolute -top-24 -right-24 w-48 h-48 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none ${
+                  idx === 0
+                    ? "bg-gradient-to-br from-indigo-500/20 to-purple-500/20"
+                    : "bg-gradient-to-br from-cyan-500/20 to-blue-500/20"
+                }`}
+              />
+
               <div>
                 <div className="flex items-center justify-between gap-2 mb-3">
                   <span className={`text-xs font-semibold px-2.5 py-0.5 rounded-full border ${project.categoryColor}`}>
                     {project.category}
                   </span>
                   {project.featured && (
-                    <span className="text-[11px] font-bold tracking-wider uppercase text-blue-600 dark:text-blue-400">
-                      ★ Featured
+                    <span className="text-[11px] font-bold tracking-wider uppercase bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-300 bg-clip-text text-transparent flex items-center gap-1">
+                      <span>★</span> Featured
                     </span>
                   )}
                 </div>
 
-                <h3 className="text-lg font-bold text-neutral-950 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors flex items-center justify-between">
+                <h3 className="text-lg font-bold text-neutral-950 dark:text-white mb-2 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors flex items-center justify-between">
                   <span>{project.title}</span>
-                  <ArrowUpRight className="w-4 h-4 text-neutral-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+                  <ArrowUpRight className="w-4 h-4 text-neutral-400 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
                 </h3>
 
                 <p className="text-neutral-600 dark:text-neutral-400 text-xs sm:text-sm leading-relaxed mb-6 font-normal">
@@ -90,7 +103,7 @@ export function Projects() {
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-2 py-0.5 text-[11px] font-medium rounded-md bg-neutral-100 dark:bg-neutral-800/80 text-neutral-700 dark:text-neutral-300 border border-neutral-200/60 dark:border-neutral-700"
+                      className="px-2.5 py-0.5 text-[11px] font-medium rounded-md bg-neutral-100/80 dark:bg-neutral-800/60 text-neutral-700 dark:text-neutral-300 border border-neutral-200/60 dark:border-neutral-700/60 group-hover:border-indigo-500/30 transition-colors"
                     >
                       {tag}
                     </span>
@@ -102,7 +115,7 @@ export function Projects() {
                     href={project.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-neutral-900 dark:text-neutral-200 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-200 ease-out hover:-translate-y-0.5 active:scale-95 underline-offset-4"
+                    className="inline-flex items-center gap-1.5 text-neutral-900 dark:text-neutral-100 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-200 ease-out hover:-translate-y-0.5 active:scale-95 underline-offset-4"
                   >
                     <ExternalLink className="w-3.5 h-3.5" />
                     <span>View Project</span>
